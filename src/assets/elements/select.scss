@@ -1,0 +1,88 @@
+.select {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+
+  &-placeholder {
+    height: 36px;
+    border-radius: 8px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &-svg {
+    width: 16px;
+    height: 8px;
+    margin-right: 4px;
+    margin-left: 4px;
+    stroke: currentColor;
+    transition-duration: 450ms;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  &-options {
+    width: 160px;
+    padding-left: 16px;
+    padding-top: 16px;
+    padding-bottom: 4px;
+    margin-top: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+    position: absolute;
+    z-index: 1;
+
+    @include from($xl) {
+      width: 192px;
+    }
+  }
+
+  &-options p {
+    margin-bottom: 16px;
+
+    span:hover {
+      color: $blue;
+    }
+  }
+
+}
+
+.placeholder-active {
+  background-color: $blue;
+  color: white;
+}
+
+.placeholder-default {
+  background-color: white;
+  color: black;
+}
+
+.svg-active {
+  color: white;
+  --tw-rotate: 180deg;
+}
+
+.svg-default {
+  color: black;
+}
+
+.span-active {
+  color: $blue;
+}
+
+.span-default {
+  color: black;
+}

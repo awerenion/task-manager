@@ -1,0 +1,39 @@
+@function add_px($val) {
+  @if type-of($val) == 'number' {
+      @if unitless($val) == true {
+          @return $val + 'px';
+      } @else {
+          @return $val;
+      }
+  } @else {
+      @if str-index($val, 'p') != null {
+          @return $val;
+      } @else {
+          @return $val + 'px';
+      }
+  }
+}
+
+@mixin to($max_width, $height: false) {
+  @if $height == true  {
+      @media screen and (max-height: add_px($max_width)) {
+          @content;
+      }
+  } @else {
+      @media screen and (max-width: add_px($max_width)) {
+          @content;
+      }
+  }
+}
+
+@mixin from($min_width, $height: false) {
+  @if $height == true  {
+      @media screen and (min-height: add_px($min_width)) {
+          @content;
+      }
+  } @else {
+      @media screen and (min-width: add_px($min_width)) {
+          @content;
+      }
+  }
+}

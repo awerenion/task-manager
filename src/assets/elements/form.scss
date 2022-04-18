@@ -1,0 +1,74 @@
+.form {
+  min-width: 336px;
+  height: 345px;
+  border-radius: 10px;
+  padding: 16px;
+  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+  background: $gray-light;
+  
+  &-item:first-child {
+    margin-top: 0px;
+  }
+
+  &-item {
+    width: 100%;
+    margin-top: 16px;
+    position: relative;
+
+    &_error {
+      border: 1px solid $red;
+    }
+  }
+
+  &-item_input {
+    height: 36px;
+    width: 100%;
+    border-radius: 7px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: white;
+  }
+
+  &-description {
+    display: inline;
+    font-size: $small-text;
+    line-height: 1.15;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+  }
+
+  &-area {
+    height: 72px;
+    border: none;
+    border-radius: 7px;
+    padding-left: 16px;
+    padding-right: 1px;
+    padding-top: 8.8px;
+    resize: none;
+  }
+
+  &-area:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+
+  input:focus::placeholder,
+  textarea:focus::placeholder {
+    display: none;
+  }
+
+
+  &-button {
+    height: 36px;
+    background: $blue;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+
+  &-button:hover {
+    background: $blue-darker;
+  }
+}

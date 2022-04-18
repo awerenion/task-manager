@@ -1,0 +1,43 @@
+.tasks {
+  width: 100%;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  background: $gray-light;
+
+  &-item:first-child {
+    margin-top: 0;
+  }
+
+  &-item {
+    display: flex;
+    margin-top: 16px;
+    flex-direction: column;
+
+    > * + * {
+      margin-top: 4px;
+    }
+
+    &_body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_input {
+      width: 100%;
+    }
+
+    &_input:focus::placeholder {
+      display: none;
+    }
+
+    &_body-action {
+      font-size: $task-text;
+      line-height: 1.18;
+      opacity: 0.8;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
