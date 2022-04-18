@@ -2,7 +2,7 @@
   <div class="form">
     <div
       v-for="(task, taskIndex) in form.items"
-      :key="taskIndex + task.title"
+      :key="taskIndex"
       class="form-item"
     >
       <component

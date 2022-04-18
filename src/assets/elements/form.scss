@@ -8,13 +8,12 @@
   flex-direction: column;
   background: $gray-light;
   
-  &-item:first-child {
-    margin-top: 0px;
+  > * + * {
+    margin-top: 16px;
   }
 
   &-item {
     width: 100%;
-    margin-top: 16px;
     position: relative;
 
     &_error {

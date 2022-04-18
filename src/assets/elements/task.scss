@@ -6,13 +6,12 @@
   flex-direction: column;
   background: $gray-light;
 
-  &-item:first-child {
-    margin-top: 0;
+  > * + * {
+    margin-top: 16px;
   }
 
   &-item {
     display: flex;
-    margin-top: 16px;
     flex-direction: column;
 
     > * + * {
