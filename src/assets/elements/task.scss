@@ -28,7 +28,7 @@
     }
 
     &_input:focus::placeholder {
-      display: none;
+      color: transparent;
     }
 
     &_body-action {

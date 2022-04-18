@@ -55,7 +55,7 @@
 
   input:focus::placeholder,
   textarea:focus::placeholder {
-    display: none;
+    color: transparent;
   }
 
 
