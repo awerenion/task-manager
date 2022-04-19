@@ -1,5 +1,12 @@
 # Task manager
 
+## Versions
+
+```
+Node.js v14.17.3.
+npm@6.14.13
+```
+
 ## Project setup
 
 ```
